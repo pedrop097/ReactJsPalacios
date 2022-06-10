@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ReactJsPalacios/static/css/main.073c9b0a.css",
+    "main.js": "/ReactJsPalacios/static/js/main.a69e7b87.js",
+    "static/js/787.319676fc.chunk.js": "/ReactJsPalacios/static/js/787.319676fc.chunk.js",
+    "index.html": "/ReactJsPalacios/index.html",
+    "main.073c9b0a.css.map": "/ReactJsPalacios/static/css/main.073c9b0a.css.map",
+    "main.a69e7b87.js.map": "/ReactJsPalacios/static/js/main.a69e7b87.js.map",
+    "787.319676fc.chunk.js.map": "/ReactJsPalacios/static/js/787.319676fc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.a69e7b87.js"
+  ]
+}
