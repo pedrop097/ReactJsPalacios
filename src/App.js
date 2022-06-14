@@ -1,8 +1,9 @@
 // import logo from './logo.svg';
 //import React from 'react';
+//@ts-check
 
 import './App.css';
-import Nav from './components/NavBar';
+import Nav from './Components/NavBar';
 
 function App() {
   return (
