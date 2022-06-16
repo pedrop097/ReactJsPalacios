@@ -2,16 +2,17 @@
 //import React from 'react';
 //@ts-check
 
+import { logDOM } from '@testing-library/react';
 import './App.css';
 import Nav from './Components/NavBar';
-
+import ItemListContainer from './Components/ItemListContainer';
 function App() {
   return (
     <div className="App">
       <Nav />
       <header className="App-header">
 
-        <h1>DIONISO SHOP DE BEBIDAS</h1>
+        <ItemListContainer />
         <p>Somos una empresa dedicada a la venta de bebidas alcoholicas, especialmente de vinos.</p>
         <img src="./logotico.png"></img>
 

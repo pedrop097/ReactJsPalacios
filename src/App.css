@@ -27,11 +27,18 @@
 font-weight:bold;
 
 }
-.nav{
+nav{
   background-color: darkgray;
+  display: flex;
+  margin: 10;
+  justify-content:space-between
 }
 .logotipo{
  
   margin: 10px;
  
+}
+.carrito{
+  margin: 15px;
+  
 }

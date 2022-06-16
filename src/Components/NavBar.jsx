@@ -1,8 +1,11 @@
-
+import CartWidget from "./CartWidget";
 
 function Nav(){
     return(
+      <div>
        <nav>
+        
+       
         
       <ul className="nav nav-tabs">
       <img src="./logotico.png"  width="40" height="30" className="logotipo"></img>
@@ -26,10 +29,10 @@ function Nav(){
       </li>
     </ul>
     
-  
+  <CartWidget cant="10" />
     
     </nav>
-        
+        </div>
 );
 }
 export default Nav;
