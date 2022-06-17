@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function ItemListContainer() {
+export default function ItemListContainer({ saludo }) {
   return (
     <div>
-      <h1>BIENVENIDOS A DIONISO SHOP DE BEBIDAS</h1>
+      {saludo}
     </div>
   )
 }

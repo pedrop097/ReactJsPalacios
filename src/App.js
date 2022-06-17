@@ -12,7 +12,7 @@ function App() {
       <Nav />
       <header className="App-header">
 
-        <ItemListContainer />
+        <ItemListContainer saludo="BIENVENIDO A DIONISO SHOP DE BEBIDAS" />
         <p>Somos una empresa dedicada a la venta de bebidas alcoholicas, especialmente de vinos.</p>
         <img src="./logotico.png"></img>
 
