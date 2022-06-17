@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "//pedrop097.github.io/ReactJsPalacios/static/css/main.c0e42b81.css",
-    "main.js": "//pedrop097.github.io/ReactJsPalacios/static/js/main.7873eff8.js",
+    "main.js": "//pedrop097.github.io/ReactJsPalacios/static/js/main.52aa68b9.js",
     "static/js/787.319676fc.chunk.js": "//pedrop097.github.io/ReactJsPalacios/static/js/787.319676fc.chunk.js",
     "index.html": "//pedrop097.github.io/ReactJsPalacios/index.html",
     "main.c0e42b81.css.map": "//pedrop097.github.io/ReactJsPalacios/static/css/main.c0e42b81.css.map",
-    "main.7873eff8.js.map": "//pedrop097.github.io/ReactJsPalacios/static/js/main.7873eff8.js.map",
+    "main.52aa68b9.js.map": "//pedrop097.github.io/ReactJsPalacios/static/js/main.52aa68b9.js.map",
     "787.319676fc.chunk.js.map": "//pedrop097.github.io/ReactJsPalacios/static/js/787.319676fc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c0e42b81.css",
-    "static/js/main.7873eff8.js"
+    "static/js/main.52aa68b9.js"
   ]
 }
