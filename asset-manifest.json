@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "//pedrop097.github.io/ReactJsPalacios/static/css/main.ebcedb92.css",
-    "main.js": "//pedrop097.github.io/ReactJsPalacios/static/js/main.1a983a3f.js",
+    "main.css": "//pedrop097.github.io/ReactJsPalacios/static/css/main.a7b0d9ed.css",
+    "main.js": "//pedrop097.github.io/ReactJsPalacios/static/js/main.80a225a3.js",
     "static/js/787.319676fc.chunk.js": "//pedrop097.github.io/ReactJsPalacios/static/js/787.319676fc.chunk.js",
     "index.html": "//pedrop097.github.io/ReactJsPalacios/index.html",
-    "main.ebcedb92.css.map": "//pedrop097.github.io/ReactJsPalacios/static/css/main.ebcedb92.css.map",
-    "main.1a983a3f.js.map": "//pedrop097.github.io/ReactJsPalacios/static/js/main.1a983a3f.js.map",
+    "main.a7b0d9ed.css.map": "//pedrop097.github.io/ReactJsPalacios/static/css/main.a7b0d9ed.css.map",
+    "main.80a225a3.js.map": "//pedrop097.github.io/ReactJsPalacios/static/js/main.80a225a3.js.map",
     "787.319676fc.chunk.js.map": "//pedrop097.github.io/ReactJsPalacios/static/js/787.319676fc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ebcedb92.css",
-    "static/js/main.1a983a3f.js"
+    "static/css/main.a7b0d9ed.css",
+    "static/js/main.80a225a3.js"
   ]
 }
