@@ -10,9 +10,9 @@ export default function ItemListContainer({ saludo }) {
   const [productList, setProductlist] = useState([])
   useEffect(() => {
     let products = [
-      {id:"1ab" ,title: "Vino", price :1000, pictureURL:"file:///C:/Users/Pedro%20Palacios/Desktop/Curso%20React%20JS/proyecto/public/almamora%20(1).webp"},
-      {id:"1ac" ,title: "Vino", price :1200, pictureURL:"./logotico.png"},
-      {id:"1ad" ,title: "Vino", price :1000, pictureURL:""},
+      {id:"1" ,title: "Vino Dilema", price :1000, img:"./dilema.png"},
+      {id:"2" ,title: "Cerveza Corona", price :1200, img:"./corona.png"},
+      {id:"3" ,title: "Vodka Absolut", price :3000, img:"absolut.png"},
     ];
      new Promise ((resolve, reject) => {
     setTimeout(() => {
