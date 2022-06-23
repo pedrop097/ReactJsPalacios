@@ -7,7 +7,7 @@ import ItemList from '../ItemList/ItemList';
 
 
 export default function ItemListContainer({ saludo }) {
-  const [productlist, setProductlist] = useState([])
+  const [productList, setProductlist] = useState([])
   useEffect(() => {
     let products = [
       {id:"1ab" ,title: "Vino", price :1000, pictureURL:"file:///C:/Users/Pedro%20Palacios/Desktop/Curso%20React%20JS/proyecto/public/almamora%20(1).webp"},
@@ -20,6 +20,7 @@ export default function ItemListContainer({ saludo }) {
     }, 2000)
       }).then((res)=>{
         setProductlist(res)
+        
       })
     }, [])
     
@@ -27,7 +28,7 @@ export default function ItemListContainer({ saludo }) {
   return (
     <>
       <h1>{saludo}</h1>
-  <ItemList  productlist={productlist}/>
+  <ItemList productList={productList}/>
     </>
   )
 }
