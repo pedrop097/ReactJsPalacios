@@ -1,10 +1,11 @@
+/* eslint-disable jsx-a11y/alt-text */
 // import logo from './logo.svg';
 //import React from 'react';
 //@ts-check
 
 import './App.css';
 import Nav from './Components/NavBar';
-import ItemListContainer from './Components/ItemListContainer';
+import ItemListContainer from './Components/itemListContainer/ItemListContainer';
 import ItemCount from './Components/ItemCount';
 
 
@@ -21,7 +22,7 @@ function App() {
 
         <ItemListContainer saludo="BIENVENIDO A DIONISO SHOP DE BEBIDAS" />
         <p>Somos una empresa dedicada a la venta de bebidas alcoholicas, especialmente de vinos.</p>
-        <img src="./logotico.png"></img>
+    
 
         <div className="card" style={{ width: "18rem" }}>
           <img src="./almamora.png" className="card-img-top" alt="..." />

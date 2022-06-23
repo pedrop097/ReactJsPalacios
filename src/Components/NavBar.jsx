@@ -1,4 +1,4 @@
-import CartWidget from "./CartWidget";
+import CartWidget from "./CarWidget/CartWidget";
 
 function Nav(){
     return(
@@ -8,28 +8,28 @@ function Nav(){
        
         
       <ul className="nav nav-tabs">
-      <img src="./logotico.png"  width="40" height="30" className="logotipo"></img>
+      <img src="./logotico.png"  width="40" height="30" className="logotipo" alt=""></img>
       <li className="nav-item">
-        <a className="nav-link" aria-current="page" href="#">Inicio</a>
+        <button className="nav-link" aria-current="page">Inicio</button>
       </li>
       <li className="nav-item dropdown">
-        <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Productos</a>
+        <button className="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Productos</button>
         <ul className="dropdown-menu">
-          <li><a className="dropdown-item" href="#">Cervezas</a></li>
-          <li><a className="dropdown-item" href="#">Vinos</a></li>
-          <li><a className="dropdown-item" href="#">Licores</a></li>
+          <li><button className="dropdown-item">Vodka</button></li>
+          <li><button className="dropdown-item">Cervezas</button></li>
+          <li><button className="dropdown-item">Licores</button></li>
                     
         </ul>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Promociones</a>
+        <button className="nav-link" href="#">Promociones</button>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Contacto</a>
+        <button className="nav-link" href="#">Contacto</button>
       </li>
     </ul>
     
-  <CartWidget cant="10" />
+  <CartWidget cant="8" />
     
     </nav>
         </div>

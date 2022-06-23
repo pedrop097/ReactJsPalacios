@@ -17,7 +17,7 @@ export default function ItemCount({ stock, initial }) {
     }
     function onAdd() {
         if (carrito > 0) {
-            alert("Productos en Carrito:" + " " + (carrito));
+            alert("Productos en Carrito:"  + (carrito));
         }
         else {
             setCarrito(carrito);
