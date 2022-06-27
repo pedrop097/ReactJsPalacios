@@ -7,7 +7,7 @@ import ItemList from '../ItemList/ItemList';
 
 
 export default function ItemListContainer({ saludo }) {
-  const [productList, setProductlist] = useState([])
+  const [productsList, setProductlist] = useState([])
   useEffect(() => {
     let products = [
       {id:"1" ,title: "Vino Dilema", price :1000, img:"./dilema.png"},
@@ -28,7 +28,7 @@ export default function ItemListContainer({ saludo }) {
   return (
     <>
       <h1>{saludo}</h1>
-  <ItemList productList={productList}/>
+  <ItemList productsList={productsList}/>
     </>
   )
 }
