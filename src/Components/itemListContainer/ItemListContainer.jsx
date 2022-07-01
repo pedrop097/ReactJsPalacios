@@ -3,32 +3,40 @@
 
 import React, {useEffect, useState} from 'react'
 import ItemList from '../ItemList/ItemList';
+import { getArray } from '../helpers/getArray';
+import { array } from '../Data/Data';
+import {useParams} from 'react-router-dom'
+
+export default function ItemListContainer() {
+  const [productsList, setProductlist] = useState({})
+  const [loading, setLoading] = useState(true)
+  const {categoryId} = useParams()
+ 
+useEffect(()=> {
+getArray(array)
+.then(res=> {
+  categoryId?
+  setProductlist( res.filter((item)=> item.category === categoryId))
+  :
+  setProductlist(res)
+})
+.catch(err=> console.log(err))
+.finally(()=> setLoading(false))
+},[categoryId])
+
+return (
+  <div>
+      {
+   loading?
+   <div>Cargando...</div>
+    :
+    <div style={{margin:"10px", display:"flex", justifyContent:"space-around", flexWrap:"wrap"}}>
+<ItemList  productsList={productsList}/>
+</div>
+      }
+  </div>
+)
 
 
 
-export default function ItemListContainer({ saludo }) {
-  const [productsList, setProductlist] = useState([])
-  useEffect(() => {
-    let products = [
-      {id:"1" ,title: "Vino Dilema", price :1000, img:"./dilema.png"},
-      {id:"2" ,title: "Cerveza Corona", price :1200, img:"./corona.png"},
-      {id:"3" ,title: "Vodka Absolut", price :3000, img:"absolut.png"},
-    ];
-     new Promise ((resolve, reject) => {
-    setTimeout(() => {
-    resolve (products)
-    }, 2000)
-      }).then((res)=>{
-        setProductlist(res)
-        
-      })
-    }, [])
-    
-
-  return (
-    <>
-      <h1>{saludo}</h1>
-  <ItemList productsList={productsList}/>
-    </>
-  )
 }

@@ -1,39 +1,50 @@
+//@ts-check
 import CartWidget from "./CarWidget/CartWidget";
+import { Link } from 'react-router-dom';
+function Nav() {
+  return (
 
-function Nav(){
-    return(
-      <div>
-       <nav>
-        
+    <nav>
+
+      <Link to={"/"} style={{ textDecoration: "none", color: "black", margin:"10px" }}>
        
+        <img src="../imagenes/logotico.png" width="40" height="30" className="logotipo" alt=""></img>
+        DIONISO SHOP DE BEBIDAS
+      </Link>
+
+      <ul className="nav nav-tabs" style={{margin:"10px"}}>
+
+        <li className="nav-item">
+          <button className="nav-link" aria-current="page">Home</button>
+        </li>
+        <li className="nav-item">
+          <button className="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Productos</button>
+
+          <div className="dropdown-menu">
+
+      
+            <button className="dropdown-item">
+           <Link style={{textDecoration:"none", color:"black", fontFamily:"sans-serif"}} to={"/category/vinos"}>Vinos</Link>
+              </button>
+            <button className="dropdown-item">
+            <Link style={{textDecoration:"none", color:"black",fontFamily:"sans-serif"}} to={"/category/cervezas"}>Cervezas</Link>
+              
+            </button>
+            <button className="dropdown-item">
+            <Link style={{textDecoration:"none", color:"black",fontFamily:"sans-serif"}} to={"/category/vodka"}>Vodka</Link>
+             </button>
+
+          </div>
+        </li>
         
-      <ul className="nav nav-tabs">
-      <img src="./logotico.png"  width="40" height="30" className="logotipo" alt=""></img>
-      <li className="nav-item">
-        <button className="nav-link" aria-current="page">Inicio</button>
-      </li>
-      <li className="nav-item dropdown">
-        <button className="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Productos</button>
-        <ul className="dropdown-menu">
-          <li><button className="dropdown-item">Vodka</button></li>
-          <li><button className="dropdown-item">Cervezas</button></li>
-          <li><button className="dropdown-item">Licores</button></li>
-                    
-        </ul>
-      </li>
-      <li className="nav-item">
-        <button className="nav-link" href="#">Promociones</button>
-      </li>
-      <li className="nav-item">
-        <button className="nav-link" href="#">Contacto</button>
-      </li>
-    </ul>
-    
-  <CartWidget cant="8" />
-    
+        <li className="nav-item">
+          <button className="nav-link">Contacto</button>
+        </li>
+      </ul>
+      <CartWidget/>
     </nav>
-        </div>
-);
+
+  );
 }
 export default Nav;
 
