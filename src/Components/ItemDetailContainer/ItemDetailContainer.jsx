@@ -25,6 +25,7 @@ useEffect(()=> {
      <div>Cargando...</div>
       :
 <ItemDetail  {...product}/>
+
         }
     </div>
   )
