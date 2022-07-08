@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
 
 
-export default function ItemCount({ stock, initial, onAdd}) {
+export default function ItemCount({ stock, initial, onAdd, itemProd}) {
 const [count,setCount] = useState(initial)
 const Add =  ()=> {
     setCount(count + 1)
@@ -12,6 +12,7 @@ const Res = () => {
 }
 return(
 <>
+Artículo {itemProd.id}
     <div style={{margin:"10px", display:"flex", justifyContent:"space-evenly"}}>
     <button style={{margin:"10px", height:"32px"}} onClick={Add} disabled={count === stock}>+</button>
     <h1>{count}</h1>

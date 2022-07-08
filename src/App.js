@@ -7,6 +7,9 @@ import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailCont
 // import ItemCount from './Components/ItemCount';
 
 import  {BrowserRouter, Routes, Route} from 'react-router-dom'
+import CartWidget from './Components/CarWidget/CartWidget';
+
+
 
 
 
@@ -15,18 +18,25 @@ import  {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 
 function App() {
+  
  
   return (
 
     <>
+    
+      
+        
     <BrowserRouter>
     <Nav />
     <Routes>
       <Route path='/' element ={<ItemListContainer/>}/>
       <Route path='/category/:categoryId' element ={<ItemListContainer/>}/>
       <Route path='/item/:itemId' element ={ <ItemDetailContainer/> }/>
+      <Route path="/cart" element={<CartWidget />} />
     </Routes>
     </BrowserRouter>
+    
+    
     {/*<div className="App">
     
       <header className="App-header">

@@ -8,8 +8,8 @@ function Nav() {
 
       <Link to={"/"} style={{ textDecoration: "none", color: "black", margin:"10px" }}>
        
-        <img src="../imagenes/logotico.png" width="40" height="30" className="logotipo" alt=""></img>
-        DIONISO SHOP DE BEBIDAS
+        <img src="../imagenes/logotico.png" width="40" height="30" className="logotipo" alt=""></img><></>
+        Dinioso Shop de Bebidas
       </Link>
 
       <ul className="nav nav-tabs" style={{margin:"10px"}}>
