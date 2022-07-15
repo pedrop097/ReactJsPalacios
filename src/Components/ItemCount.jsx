@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 
 
-export default function ItemCount({ stock, initial}) {
+export default function ItemCount({ stock, initial, onAdd }) {
 
     const [cant, setCant] = useState(initial)
 
-   
+
     const Add = () => {
         setCant(cant + 1)
     }
@@ -17,16 +17,16 @@ export default function ItemCount({ stock, initial}) {
             <div >
 
                 <div style={{ margin: "10px", display: "flex", justifyContent: "space-evenly" }}>
-                    
-                    
+
+
                     <button style={{ margin: "10px", height: "32px" }} onClick={Res} disabled={cant === initial}>-</button>
-                     <h1>{cant}</h1>
+                    <h1>{cant}</h1>
                     <button style={{ margin: "10px", height: "32px" }} onClick={Add} disabled={cant === stock}>+</button>
-                    
+                   
                 </div>
+                <button onClick={() => onAdd(cant)}>Agregar Productos</button>
             </div>
         </>
     )
 
 }
-

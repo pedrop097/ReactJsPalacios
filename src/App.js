@@ -7,7 +7,10 @@ import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailCont
 // import ItemCount from './Components/ItemCount';
 
 import  {BrowserRouter, Routes, Route} from 'react-router-dom'
-import CartWidget from './Components/CarWidget/CartWidget';
+
+import { myContext } from './CartContext/CartContext';
+import { useContext } from 'react';
+import Cart from './Components/Cart/Cart';
 
 
 
@@ -18,7 +21,7 @@ import CartWidget from './Components/CarWidget/CartWidget';
 
 
 function App() {
-  
+  const {cart, addItem, removeItem, clear, setCarritoVacio, carritoVacio} = useContext(myContext);
  
   return (
 
@@ -32,7 +35,7 @@ function App() {
       <Route path='/' element ={<ItemListContainer/>}/>
       <Route path='/category/:categoryId' element ={<ItemListContainer/>}/>
       <Route path='/item/:itemId' element ={ <ItemDetailContainer/> }/>
-      <Route path="/cart" element={<CartWidget />} />
+      <Route path="/cart" element={<Cart />} />
     </Routes>
     </BrowserRouter>
     

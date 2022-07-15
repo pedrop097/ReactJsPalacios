@@ -1,16 +1,18 @@
+//@tscheck
 import React from 'react'
 import ItemCount from '../ItemCount'
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
 
 
-export default function ItemDetail({ title, price, img, descripcion, cant}) {
+export default function ItemDetail({ title, price, img, descripcion }) {
 
-  
+
   const [changeButton, setChangeButton] = useState(true);
   function onAdd(cant) {
     alert(`Agregue ${cant} ${title}  al carrito`);
- 
+    setChangeButton(false)
+
   }
 
   return (
@@ -23,34 +25,17 @@ export default function ItemDetail({ title, price, img, descripcion, cant}) {
             <h5>Descripcion: {descripcion}</h5>
             <h4>Precio ${price}</h4>
           </div>
-          <button onClick={() =>  setChangeButton(!changeButton)}>
-            Agregar Productos
-           </button>
-          {changeButton ? (
-          <>
- <ItemCount
-            
-            stock={5}
-            initial={1}
-          
-          /> 
 
-         </>
-           
+          {
+            changeButton ?
+              <ItemCount stock={5} initial={1} onAdd={onAdd} />
+              :
+              <button>
 
-          ) : (
+                <Link to={'/cart'} style={{ color: 'inherit', textDecoration: 'none' }}>  Finalizar mi compra </Link>
 
-            <div>
-            <button  onAdd={onAdd(cant)}>
-
-<Link to={'/cart'} style={{ color: 'inherit', textDecoration: 'none' }}>  Finalizar mi compra </Link>
-
-</button>
-
-              
-
-            </div>
-          )}
+              </button>
+          }
 
         </div>
       </div>
