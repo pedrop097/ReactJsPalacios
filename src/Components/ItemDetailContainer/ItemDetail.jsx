@@ -3,16 +3,19 @@ import React from 'react'
 import ItemCount from '../ItemCount'
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
+import { myContext } from '../../CartContext/CartContext';
+import { useContext } from 'react';
 
-
-export default function ItemDetail({ title, price, img, descripcion }) {
+export default function ItemDetail({id, title, price, img, descripcion}) {
 
 
   const [changeButton, setChangeButton] = useState(true);
+  const {addItem} = useContext(myContext)
+  const  product = {id, title , price, img, descripcion }
   function onAdd(cant) {
     alert(`Agregue ${cant} ${title}  al carrito`);
     setChangeButton(false)
-
+addItem(product, cant)
   }
 
   return (

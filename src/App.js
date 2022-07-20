@@ -8,8 +8,8 @@ import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailCont
 
 import  {BrowserRouter, Routes, Route} from 'react-router-dom'
 
-import { myContext } from './CartContext/CartContext';
-import { useContext } from 'react';
+import CartContext, { myContext } from './CartContext/CartContext';
+//import { useContext } from 'react';
 import Cart from './Components/Cart/Cart';
 
 
@@ -21,14 +21,14 @@ import Cart from './Components/Cart/Cart';
 
 
 function App() {
-  const {cart, addItem, removeItem, clear, setCarritoVacio, carritoVacio} = useContext(myContext);
+  // const {cart, addItem, removeItem, clear, setCarritoVacio, carritoVacio} = useContext(myContext);
  
   return (
 
     <>
     
       
-        
+  <CartContext>
     <BrowserRouter>
     <Nav />
     <Routes>
@@ -38,7 +38,7 @@ function App() {
       <Route path="/cart" element={<Cart />} />
     </Routes>
     </BrowserRouter>
-    
+    </CartContext>
     
     {/*<div className="App">
     
