@@ -1,14 +1,14 @@
 //@ts-check
 
 import './App.css';
+import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
+import ItemListContainer from './Components/itemListContainer/ItemListContainer';
 import Nav from './Components/NavBar';
-import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer'
- import ItemListContainer from './Components/itemListContainer/ItemListContainer';
 // import ItemCount from './Components/ItemCount';
 
-import  {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import CartContext, { myContext } from './CartContext/CartContext';
+import CartContext from './CartContext/CartContext';
 //import { useContext } from 'react';
 import Cart from './Components/Cart/Cart';
 
@@ -36,6 +36,8 @@ function App() {
       <Route path='/category/:categoryId' element ={<ItemListContainer/>}/>
       <Route path='/item/:itemId' element ={ <ItemDetailContainer/> }/>
       <Route path="/cart" element={<Cart />} />
+      
+
     </Routes>
     </BrowserRouter>
     </CartContext>
