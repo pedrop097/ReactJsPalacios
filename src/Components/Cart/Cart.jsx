@@ -54,6 +54,7 @@ export default function Cart() {
 </div>
 
 <h2 style={{margin:"20px"}}>Total de compra: ${cart.reduce((p, c)=> p + c.total, 0)}</h2>
+<button> <Link to='/checkout' style={{ color: 'black', textDecoration: 'none' }}> Finalizar compra</Link></button>
 </>
 :
 <Link to="/"> <h3 style={{margin:"20px",display:"flex", justifyContent:"center", textDecoration:"none", fontFamily:"sans-serif"}}>No tenes productos en el carrito, click para ir al inicio</h3></Link>

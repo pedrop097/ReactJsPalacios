@@ -15,6 +15,9 @@ export default function CartContext({children}) {
         return cart.find((product) => product.id === id);
     
     }
+ 
+
+    
     function addItem(item, quantity) {
         
         if(isInCart(item.id)){
@@ -23,8 +26,9 @@ export default function CartContext({children}) {
 
        setCart([...productUpdate])
         }else{
+         
             setCart([...cart,{...item,"cantidad": quantity, total : item.price * quantity}]);
-  
+            
         }
        
     }
@@ -38,10 +42,11 @@ export default function CartContext({children}) {
       
          
     }
+    
   
   return (
 
-    <div><myContext.Provider value={{cart, addItem, removeItem, clear}}>
+    <div><myContext.Provider value={{cart, addItem, removeItem, clear, setCart}}>
         
       {children}
       </myContext.Provider>
