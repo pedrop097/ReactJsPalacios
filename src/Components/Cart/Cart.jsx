@@ -31,16 +31,17 @@ export default function Cart() {
 
   
     <div>
-<div style={{margin:"20px", display:"flex", justifyContent:"space-between"}} key={item.id}> 
-<img   style={{ width: "400px" }} src={item.img} alt={item.title}/>
-<div style={{margin:"60px"}}>
+<div style={{margin:"20px", display:"flex", justifyContent:"center", width:"400px", border:"solid 2px black", backgroundColor:"#d3cece"}} key={item.id}> 
+<img   style={{ width: "300px" }} src={item.img} alt={item.title}/>
+<div style={{margin:"40px"}}>
  <h3>{item.title}</h3>
 <h5>Cantidad: {item.cantidad} </h5> 
 <h4>total: ${item.total}</h4>
 </div>
-<button style={{width:"30px", height:"30px",margin:"8px"}} onClick={() => { removeItem(item.id); } }>X</button>
+
 
 </div>
+<button style={{width:"30px", height:"30px",margin:"30px", backgroundColor:"black", color:"red"}} onClick={() => { removeItem(item.id); } }>X</button>
 <div style={{margin:"10px", display:"flex", justifyContent:"flex-end"}}>
 
 </div>
@@ -54,7 +55,7 @@ export default function Cart() {
 </div>
 
 <h2 style={{margin:"20px"}}>Total de compra: ${cart.reduce((p, c)=> p + c.total, 0)}</h2>
-<button> <Link to='/checkout' style={{ color: 'black', textDecoration: 'none' }}> Finalizar compra</Link></button>
+<button style={{margin:"5px"}}> <Link to='/checkout' style={{ color: 'black', textDecoration: 'none', margin:"20px" }}> Finalizar compra</Link></button>
 </>
 :
 <Link to="/"> <h3 style={{margin:"20px",display:"flex", justifyContent:"center", textDecoration:"none", fontFamily:"sans-serif"}}>No tenes productos en el carrito, click para ir al inicio</h3></Link>

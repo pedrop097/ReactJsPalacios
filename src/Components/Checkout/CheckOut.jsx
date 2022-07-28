@@ -15,35 +15,76 @@ export default function CheckOut() {
     const [tel, setTel] = useState('');
     const [email, setEmail] = useState('');
    const [idCompra, setIdCompra] = useState('')
-
+   const [open,setOpen] = React.useState(false);
 function handleClickComprar(){
 
 const pedido = {buyer: {nombre: nombre, tel: tel, email: email}, 
 items: [JSON.stringify(cart)],
 };
 
+
+
 const db = getFirestore();
+
 
 if (!nombre || !tel || !email) return;
 const collectionRef = collection(db,'pedidos');
 addDoc(collectionRef, pedido).then(({id})=> setIdCompra(id))
 }
 
+function CamposValidados(){
+  if(nombre==="" || tel==="" || email===""){
+      setOpen(true)
+   }else {
+      handleClickComprar();
+      alert('Su numero Id de compra es:' + (idCompra))
+  }
+}
+
+function validarEmail(valor){
+  let re = /\S+@\S+\.\S+/;
+  if(  re.test(valor)  && (valor!=="")){
+      setEmail(valor)
+      localStorage.setItem('email', JSON.stringify(valor))    
+  }
+}
+
+ 
+function validarNombre(valor){            
+  if( (/^[A-z ]+$/.test(valor)) && (valor!=="") ){
+  setNombre(valor)
+  localStorage.setItem('name', JSON.stringify(valor))    
+  } 
+}
+function validarTel(valor){
+  let numTel = /^\d{8,12}$/;
+  if( valor.match(numTel)  && (valor!=="") ){
+      setTel(valor)
+      localStorage.setItem('phone', JSON.stringify(valor))    
+  }
+}
+
 return (
-    <div>
-<p>Su numero de pedido es:{idCompra}</p>
+    <div style={{margin:"20px"}}>
+
 
         <h1>Complete los datos para finalizar su compra</h1>
         <br/>
-     <input onChange={(e)=> setNombre(e.target.value)}  type={"text"} placeholder={"Ingrese Nombre"}></input>
+     <input onChange={(e)=> {validarNombre(e.target.value)}}  type={"Text"} placeholder={"Ingrese Nombre"}></input>
      <br />
-     <input onChange={(e)=> setTel(e.target.value)} type={"tel"} placeholder={"Ingrese Telefono"}></input>
+     <input onChange={(e)=> {validarTel(e.target.value)}} type={"Tel"} placeholder={"Ingrese Telefono"}></input>
      <br />
-     <input onChange={(e)=> setEmail(e.target.value)} type={"email"} placeholder={"Ingrese Email"}></input>
+     <input onChange={(e)=> {validarEmail(e.target.value)}} type={"email"} placeholder={"Ingrese Email"}></input>
+
+     
+              
      <br />
      <br/>
-     <button  onClick={handleClickComprar}> Comprar</button>
 
+
+     <button onClick={()=>{
+                    CamposValidados()
+                }}>Confirmar compra</button>
     </div>
   )
 }

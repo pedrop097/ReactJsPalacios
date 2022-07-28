@@ -24,7 +24,7 @@ export default function ItemCount({ stock, initial, onAdd }) {
                     <button style={{ margin: "10px", height: "32px" }} onClick={Add} disabled={cant === stock}>+</button>
                    
                 </div>
-                <button onClick={() => onAdd(cant)}>Agregar Productos</button>
+                <button style={{margin:"15px"}} onClick={() => onAdd(cant)}>Agregar Productos</button>
             </div>
         </>
     )

@@ -19,7 +19,8 @@ addItem(product, cant)
   }
 
   return (
-    <div style={{ border: "2px solid black", margin: "30px" }}>
+    <div style={{margin:"10px", display:"flex", justifyContent:"center"}}>
+    <div style={{ border: "2px solid black", margin: "40px", width:"350px" }}>
       <div style={{ width: "18rem", color: "black", margin: "20px", display: "flex", alignItems: "center" }}>
         <img src={img} className="card-img-top" style={{ width: "700px" }} alt="Dioniso" />
         <div className="card-body">
@@ -33,15 +34,16 @@ addItem(product, cant)
             changeButton ?
               <ItemCount stock={5} initial={1} onAdd={onAdd} />
               :
-              <button>
+              <button style={{margin:"15px"}}>
 
-                <Link to={'/cart'} style={{ color: 'inherit', textDecoration: 'none' }}>  Finalizar mi compra </Link>
+                <Link to={'/cart'} style={{ color: 'inherit', textDecoration: 'none'}}>  Finalizar mi compra </Link>
 
               </button>
           }
 
         </div>
       </div>
+    </div>
     </div>
   )
 }
